@@ -4,7 +4,7 @@ const fs = require('fs')
 const multer = require('multer')
 
 const { postView, putView, deleteView } = require('../controllers/eduController')
-const { postViewP, putViewP, deleteViewP } = require('../controllers/controllerProject')
+//const { postViewP, putViewP, deleteViewP } = require('../controllers/controllerProject')
 
 //For Multer upload
 const storage = multer.diskStorage({
@@ -35,7 +35,7 @@ router.put("/put", putView);
 router.delete("/delete", deleteView);
 
 //Route for project 
-router.post('/', upload.array('productImages', 3), postViewP)
-router.put('/', upload.array('productImages', 3), putViewP)
-router.delete('/deleteproject', deleteViewP)
+// router.post('/', upload.array('productImages', 3), postViewP)
+// router.put('/', upload.array('productImages', 3), putViewP)
+// router.delete('/deleteproject', deleteViewP)
 module.exports = router;
