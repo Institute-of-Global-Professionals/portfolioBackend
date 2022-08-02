@@ -5,7 +5,7 @@ const app =express();
 
 
 
-//Create social Links
+//Create social Links .../.
 const linkCreateController=("/create", (req, res,next) => {
   const user = new SocialLink({
     links:req.body.links

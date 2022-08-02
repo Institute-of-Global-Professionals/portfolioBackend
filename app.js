@@ -10,7 +10,7 @@ const socialLinkRoutes  =require("./routes/socialLinkRoutes");
 mongoose.connect(process.env.DB)
 
 app.use("/user", userRoute,workExp)
-
+//social link
 app.use("/socialLink",socialLinkRoutes)
 
 app.listen(process.env.PORT, ()=>{
