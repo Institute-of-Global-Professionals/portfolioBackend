@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 const { linkCreateController,linkUpdateController,linkDeleteController} = require('../controllers/socialLinkController')
-//routes
+//routes.
 router.post("/Links", linkCreateController);
 
 router.put("/Update", linkUpdateController);
