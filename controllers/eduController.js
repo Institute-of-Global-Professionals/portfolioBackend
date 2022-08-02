@@ -29,7 +29,6 @@ const putView = async (req, res) => {
     const eid = req.body.eid
     const index = req.body.index
 
-    // const eid = req.body.eid
     const id = cryptr.decrypt(eid)
     const user = await User.findOne({ _id: id })
 

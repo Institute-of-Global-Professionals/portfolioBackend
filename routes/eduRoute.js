@@ -6,7 +6,7 @@ const multer = require('multer')
 const { postView, putView, deleteView } = require('../controllers/eduController')
 //const { postViewP, putViewP, deleteViewP } = require('../controllers/controllerProject')
 
-//For Multer upload
+//For Multer upload b
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, './uploads/')
