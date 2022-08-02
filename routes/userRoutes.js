@@ -12,4 +12,4 @@ router.put('/awards/update', updateAwardController)
 router.delete('/awards/deleteAward', deleteAwardController)
 
  
-module.exports = router;
+module.exports = router;                             
