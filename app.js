@@ -5,9 +5,13 @@ app.use(express.json())
 
 require('dotenv').config()
 const userRoute = require("./routes/userRoutes");
+const workExp=require("./routes/workExp");
+const socialLinkRoutes  =require("./routes/socialLinkRoutes");
 mongoose.connect(process.env.DB)
 
-app.use("/user", userRoute)
+app.use("/user", userRoute,workExp)
+//social link.
+app.use("/socialLink",socialLinkRoutes)
 
 app.listen(process.env.PORT, ()=>{
     console.log("Listening..")

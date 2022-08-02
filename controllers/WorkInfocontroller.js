@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-const WorkInfo = require('../models/WorkInfoSchema')
+const WorkInfo = require('../models/WorkInfoModels')
 const express =require('express');
 const app =express();
 
