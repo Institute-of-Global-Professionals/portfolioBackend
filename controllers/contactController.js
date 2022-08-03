@@ -29,11 +29,12 @@ const contactCreateController=("/create", (req, res,next) => {
 //Update data by using Index
 const contactUpdateController=async (req, res) => {
   const id = req.body.id;
-  let user =  await SocialLink.findOne({_id : id})
-   let links= req.body.links; 
-  user.links["Facebook"] = req.body.links.Facebook || user["links"]["Facebook"];
-  user.links["Instagram"] = req.body.links.Instagram || user["links"]["Instagram"];
-  user.links["Linkedin"] = req.body.links.Linkedin || user["links"]["Linkedin"];
+  let user =  await Contact.findOne({_id : id})
+   let contact= req.body.contact; 
+  user.contact["email"] = req.body.contact.email || user["contact"]["email"];
+  user.contact["phoneNo"] = req.body.contact.phoneNo || user["contact"]["phoneNo"];
+  user.contact["homeAddress"] = req.body.contact.homeAddress || user["contact"]["homeAddress"];
+  user.contact["officeAddress"] = req.body.contact.officeAddress || user["contact"]["officeAddress"];
    user.save();
   res.json(user)
   };
@@ -50,8 +51,5 @@ const contactUpdateController=async (req, res) => {
         await user.save();
        res.json(user);
     };
-
-
- 
 
 module.exports ={contactCreateController,contactUpdateController,contactDeleteController}
