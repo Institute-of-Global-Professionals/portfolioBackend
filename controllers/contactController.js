@@ -44,10 +44,11 @@ const contactUpdateController=async (req, res) => {
 //Delete Data
      const contactDeleteController=async(req,res)=>{
         const id = req.body.id;
-        let user =  await SocialLink.findOne({_id : id})
-        user.links["Facebook"] = "Not Set";
-        user.links["Instagram"] = "Not Set";
-        user.links["Linkedin"] = "Not Set";
+        let user =  await Contact.findOne({_id : id})
+        user.contact["email"] = "Not Set";
+        user.contact["phoneNo"] = "Not Set";
+        user.contact["homeAddress"] = "Not Set";
+        user.contact["officeAddress"] = "Not Set";
         await user.save();
        res.json(user);
     };

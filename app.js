@@ -16,7 +16,6 @@ const contactRoutes  =require("./routes/contactRoutes");
 mongoose.connect(process.env.DB)
 
 app.use("/user", userRoute,workExp)
-
 //social link path
 app.use("/socialLink",socialLinkRoutes)
 app.use("/contact",contactRoutes)
