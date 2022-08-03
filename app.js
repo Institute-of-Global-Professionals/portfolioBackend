@@ -10,6 +10,7 @@ const userRoute = require("./routes/userRoutes");
 const workExp=require("./routes/workExp");
 const socialLinkRoutes  =require("./routes/socialLinkRoutes");
 const contactRoutes  =require("./routes/contactRoutes");
+const serviceRoutes  =require("./routes/serviceRoutes");
 
 
 //DB cpnnection 
@@ -19,6 +20,7 @@ app.use("/user", userRoute,workExp)
 //social link path
 app.use("/socialLink",socialLinkRoutes)
 app.use("/contact",contactRoutes)
+app.use("/service",serviceRoutes)
 
 app.listen(process.env.PORT, ()=>{
     console.log("Listening..")
