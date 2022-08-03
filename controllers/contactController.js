@@ -1,13 +1,13 @@
 const mongoose=require('mongoose');
-const SocialLink = require('../models/socialLinkModels')
+const Contact = require('../models/ContactModels')
 const express =require('express');
 const app =express();
 
 
 
-//Create social Links .../..
+//Create Contact details of User .../..
 const contactCreateController=("/create", (req, res,next) => {
-  const user = new SocialLink({
+  const user = new  Contact({
     links:req.body.links
   });
    user.save()
