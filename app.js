@@ -19,7 +19,7 @@ app.use("/user", userRoute,workExp)
 
 //social link path
 app.use("/socialLink",socialLinkRoutes)
-app.use("/contactDetails",contactRoutes)
+app.use("/contact",contactRoutes)
 
 app.listen(process.env.PORT, ()=>{
     console.log("Listening..")

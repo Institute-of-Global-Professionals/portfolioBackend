@@ -3,23 +3,25 @@ const mongoose= require('mongoose')
 const Contactschema = new mongoose.Schema({
     email: {
         type: String,
-        unique: true,
-        lowercase: true,
-        required: true
+        // unique: true,
+        // lowercase: true,
+        required: false
     },
     phoneNo: {
         type: Number,
-        unique: true,
-        required: true,
+        // unique: true,
+        required: false,
     }, 
     homeAddress: {
          type: String,
-        required: true
+        required: false
     }, 
     officeAddress: {
         type: String,
-        requires: true
+        requires: false
     }
     });
-
-module.exports= mongoose.model("contactDetails", Contactschema )
+    const ContactListschema = new mongoose.Schema ({
+        contact: Contactschema
+         })
+module.exports= mongoose.model("contactDetails", ContactListschema )

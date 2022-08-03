@@ -8,7 +8,7 @@ const app =express();
 //Create Contact details of User .../..
 const contactCreateController=("/create", (req, res,next) => {
   const user = new  Contact({
-    links:req.body.links
+    contact :req.body.contact
   });
    user.save()
     .then(result => {
